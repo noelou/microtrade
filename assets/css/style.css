@@ -1,0 +1,417 @@
+*{
+	box-sizing: border-box;
+}
+body,
+html {
+	height: 100%;
+	width: 100%;
+  font-family: 'Helvetica Light';
+  letter-spacing: 1.5;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+	scroll-behavior: smooth;
+}
+#backgroundOverlay {
+	position: fixed;
+	background-color: transparent;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  display: block;
+}
+.dp-flex {
+	display: flex;
+}
+.dp-flex-ai {
+	display: flex;
+	align-items: center;
+}
+.menu-icon-container {
+	display: none;
+	cursor: pointer;
+	height: 100%;
+	width: fit-content;
+}
+.menu-icon-container >div {
+  width: 30px;
+  height: 4px;
+  background-color: #D3D3D3;
+  margin: 6px 0;
+}
+.menu-icon-container >div:first-child {
+	margin-top: 0;
+}
+.menu-icon-container >div:last-child {
+	margin-bottom: 0;
+}
+.color-blue {
+	color: #42A5FF;
+}
+.hexagon {
+  width: 100px;
+  height: 57.735px;
+  background: #E7EAF4;
+  position: absolute;
+  top: 0;
+}
+.hexagon::before {
+  content: "";
+  position: absolute;
+  top: -28.8675px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 28.8675px solid #E7EAF4;
+}
+.hexagon::after {
+  content: "";
+  position: absolute;
+  bottom: -28.8675px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 28.8675px solid #E7EAF4;
+}
+a {
+	color: initial;
+	text-decoration: initial;
+}
+.micro-header-container {
+    margin: 40px 0;
+}
+.microtrade-wrapper >div:first-child {
+    padding: 0 120px;
+    position: relative;
+}
+.microtrade-wrapper >div {
+	padding: 40px 100px 100px;
+}
+.micro-header-container >div:first-child {
+	flex: 1;
+}
+.microtrade-wrapper >div.microtrade-hero-container {
+	padding: 0 50px;
+}
+.microtrade-logo {
+	font-family: 'Comfortaa Semi';
+	color: #42A5FF;
+	font-size: 20px;
+}
+.header-right-container >div {
+	padding: 0 30px 0 0;
+	cursor: pointer;
+}
+.header-right-container >div:last-child {
+	padding: 0;
+}
+.microtrade-hero-container {
+	background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5) ),url(../img/rocket.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 600px;
+    background-size: cover;
+}
+.microtrade-hero-container >div {
+	color: #fff;
+    padding: 120px 0;
+}
+.microtrade-hero-container .best-text {
+	font-family: 'Comfortaa';
+	font-size: 50px;
+    font-weight: 700;
+}
+.microtrade-hero-container .prod-tech-text {
+	font-weight: 400;
+    font-size: 40px;
+    margin: 10px 0 0;
+}
+.about-us-container {
+	/*background-color: #b8c6db;
+	background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);*/
+}
+.about-us-info >div:first-child {
+	padding: 100px 0 0;
+	width: 35%;
+}
+.about-us-info >div:last-child {
+	width: 65%;
+	text-align: center;
+}
+.about-us-info .section-paragraph {
+	color: #334257;
+	font-family: 'Helvetica Medium';
+	line-height: 1.5;
+	font-size: 26px;
+}
+.learn-more-btn {
+	background-color: #42A5FF;
+    border: 0;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 20px;
+    font-family: "Comfortaa";
+    padding: 10px 23px;
+    margin: 80px 0 0;
+}
+.devices-container-md {
+	display: none;
+}
+.devices-container img {
+	width: 600px;
+}
+.section-title {
+	position: relative;
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Comfortaa';
+	margin: 0 0 50px;
+}
+.section-paragraph strong {
+	background: linear-gradient(180deg,rgba(218,233,247,0) 0,rgba(218,233,247,0) 64%,#dae9f7 65%,#dae9f7);
+	/*font-size: 18px;*/
+}
+.services-details-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.services-details-container >div {
+	flex: 1 1 40px;
+	padding: 0 20px 0 0;
+}
+.services-details-container img {
+	width: 60px;
+	z-index: 1;
+}
+.services-img-container {
+	text-align: center;
+	margin: 50px 0;
+	position: relative;
+    display: flex;
+    justify-content: center;
+}
+.services-details-container span {
+	font-size: 14px;
+	color: #42A5FF;
+	margin: 5px 0 0;
+	display: block;
+}
+.services-details {
+	background-color: #f3f5fb;
+    border-radius: 2px;
+    padding: 20px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+/*.services-details:hover {
+	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	transition: 2s;
+}*/
+
+.testimonial-img-container img {
+	width: 100px;
+    border-radius: 50%;
+    border: 1px solid #e6e6e6;
+    padding: 5px;
+}
+.testimonial-details >div {
+	width: 33.33%;
+	position: relative;
+	height: 230px;
+	/*text-align: center;*/
+}
+.testimonial-details >div p {
+	font-size: 14px;
+	width: 270px;
+    /*margin: 10px auto;*/
+    margin: 10px 0;
+}
+.testimonial-name-container {
+	color: #0e2372;
+	font-weight: 700;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.microtrade-wrapper >div.contact-us-container {
+	padding: 20px 0 0;
+}
+.contact-us-container {
+	background-color: #292D2F;
+    color: #fff;
+}
+.contact-us-container .section-title {
+	text-align: left;
+	margin: 20px 0;
+}
+.contact-us-container .microtrade-logo {
+	margin: 0 0 20px;
+}
+.copyright-container {
+	background-color: #1A262F;
+	text-align: center;
+	padding: 20px 0;
+	margin: 20px 0 0;
+}
+.micro-contact-info {
+	padding: 0 80px;
+}
+.micro-contact-info >div.address-tel-email-container >div:first-child {
+	width: 40%;
+}
+.contact-detail {
+	margin: 0 0 20px;
+}
+.fa-map-marker,
+.fa-phone,
+.fa-envelope {
+	width: 30px;
+	color: #42A5FF;
+}
+.social-link-container i {
+	color: #fff;
+	font-size: 18px;
+}
+.social-link-container a {
+	background-color: #33393B;
+	padding: 8px 12px;
+	margin: 0 10px 0 0;
+	display: block;
+	outline: none;
+}
+@media ( max-width: 1250px ) {
+	.services-details {
+		height: 98px;
+	}
+}
+@media ( max-width: 1200px ) {
+	.microtrade-wrapper >div:first-child {
+		padding: 0 50px;
+	}
+	.microtrade-wrapper >div {
+		padding: 40px 50px 100px;
+	}
+	.micro-contact-info {
+		padding: 0 50px;
+	}
+}
+@media ( max-width: 1023px ) {
+	.micro-contact-info >div.address-tel-email-container >div:first-child {
+		width: 50%;
+	}
+}
+@media ( max-width: 992px ) {
+	.microtrade-wrapper >div:first-child {
+		padding: 0 20px;
+    margin: 20px 0;
+	}
+	.menu-icon-container >div {
+		width: 25px;
+    height: 2px;
+	}
+	.microtrade-wrapper >div.microtrade-hero-container {
+		padding: 0 20px;
+	}
+	.header-right-container {
+		display: none;
+	}
+	.menu-icon-container {
+		display: block;
+	}
+	.devices-container img {
+		width: 500px;
+	}
+	.testimonial-details.dp-flex {
+		display: block;
+	}
+	.testimonial-details >div {
+		width: 100%;
+		height: auto;
+	}
+	.testimonial-details >div p {
+		width: auto;
+		margin: 20px 0;
+	}
+	.testimonial-name-container {
+		position: relative;
+	}
+	.menu-dp-container {
+		position: absolute;
+		top: 40px;
+		left: 0;
+		width: 100%;
+		background-color: #fff;
+		z-index: 1;
+		padding: 20px;
+		border-top: 1px solid #d3d3d3;
+	}
+	.menu-dp-container a {
+		width: 100%;
+		display: block;
+	}
+	.menu-dp-container >div {
+		margin: 0 0 20px;
+		cursor: pointer;
+	}
+	.menu-dp-container >div:last-child {
+		margin: 0;
+	}
+}
+@media ( max-width: 768px ) {
+	.dp-flex.address-tel-email-container {
+		display: block;
+	}
+	.micro-contact-info >div.address-tel-email-container >div:first-child {
+		width: 100%;
+	}
+	.services-details {
+		height: auto;
+	}
+	.about-us-info.dp-flex  {
+		display: block;
+	}
+	.about-us-info >div:first-child {
+		width: 100%;
+	}
+	.about-us-info .section-paragraph {
+		text-align: center;
+	}
+	.about-us-info >div:last-child {
+		display: none;
+	}
+	.devices-container-md {
+		display: block;
+	}
+	.devices-container-md img {
+		width: 300px;
+	}
+	.about-us-info >div:first-child {
+		padding: 0 0 20px;
+		text-align: center;
+	}
+	.contact-detail.first-add {
+		margin: 0 0 10px;
+	}
+}
+
+@media ( max-width: 576px ) {
+	.microtrade-wrapper >div {
+		padding: 40px 20px 50px;
+	}
+	.devices-container-md img {
+		width: 250px;
+	}
+}
+
+
+
+
+
+
+
+
